@@ -58,7 +58,6 @@
             <button type="button" id="clear-cart">Cancelar Pedido</button>
         </div>
     </section>
-    <%@ include file="../template/footer.jsp" %>
 
     <script>
         $(document).ready(function() {

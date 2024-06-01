@@ -37,63 +37,120 @@
     <title>Gojos - Inicio</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     
-    <style type="text/css">
-    /* Estilos para el header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+   <style> 
+	   .welcome-section {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding: 50px 20px;
+		    background-color: #f9f9f9;
+		    border-radius: 10px;
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
 
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Estilos para la sección de desarrollador */
-.developer-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.developer-section a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.developer-section a:hover {
-    text-decoration: underline;
-}
-    
+		.welcome-content {
+		    flex: 1;
+		    padding-right: 20px;
+		}
+		
+		.welcome-content h1 {
+		    font-size: 2.5em;
+		    margin-bottom: 20px;
+		}
+		
+		.welcome-content p {
+		    font-size: 1.1em;
+		    line-height: 1.6;
+		    margin-bottom: 15px;
+		}
+		
+		.image-container {
+		    flex: 1;
+		    text-align: center;
+		}
+		
+		.image-container img {
+		    max-width: 100%;
+		    border-radius: 10px;
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+				.company-info-section {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: flex-start;
+		    margin-top: 50px;
+		}
+		
+		.company-info,
+		.developer-info {
+		    flex: 1;
+		    padding: 0 20px;
+		}
+		
+		.company-info h2,
+		.developer-info h2 {
+		    font-size: 1.8em;
+		    margin-bottom: 20px;
+		}
+		
+		.company-info p,
+		.developer-info p {
+		    font-size: 1.1em;
+		    line-height: 1.6;
+		    margin-bottom: 15px;
+		}
+		
+		.social-links {
+		    margin-top: 15px;
+		}
+		
+		.social-links a {
+		    display: inline-block;
+		    margin-right: 10px;
+		    font-size: 1.1em;
+		    color: #007bff; 
+		    text-decoration: none;
+		}
+		
+		.social-links a:hover {
+		    text-decoration: underline;
+		}
     </style>
     
 </head>
 <body>
     <%@ include file="template/headerMain.jsp" %>
     <main>
-        <section>
-            <h1>Bienvenido a Gojos Store</h1>
-            <p>Gojos es tu tienda de fitness de confianza. Ofrecemos productos de alta calidad para ayudarte a alcanzar tus metas de salud y bienestar.</p>
-            <p>Explora nuestra amplia gama de suplementos, equipos de entrenamiento y accesorios para un estilo de vida saludable.</p>
-            <p>¡Comienza tu viaje hacia un mejor tú con Gojos!</p>
-        </section>
+        <section class="welcome-section">
+		    <div class="welcome-content">
+		        <h1>Bienvenido a Gojos Stores</h1>
+		        <p>Gojos es tu tienda de fitness de confianza. Ofrecemos productos de alta calidad para ayudarte a alcanzar tus metas de salud y bienestar.</p>
+		        <p>Explora nuestra amplia gama de suplementos, equipos de entrenamiento y accesorios para un estilo de vida saludable.</p>
+		        <p>¡Comienza tu viaje hacia un mejor tú con Gojos!</p>
+		    </div>
+		    <div class="image-container">
+		        <img src="${pageContext.request.contextPath}/images/image1.jpg" alt="Fitness Image">
+		    </div>
+		</section>
+
+	<section class="company-info-section">
+	    <div class="company-info">
+	        <h2>Datos de la Empresa</h2>
+	        <p>Gojos Stores es una tienda de fitness comprometida con ofrecer productos de alta calidad para mejorar la salud y el bienestar de nuestros clientes.</p>
+	        <p>Nuestro objetivo es proporcionar una experiencia de compra excepcional y ayudar a cada persona a alcanzar sus metas de acondicionamiento físico.</p>
+	        <p>¡Únete a la comunidad de Gojos y haz que cada día cuente para tu bienestar!</p>
+	    </div>
+	    <div class="developer-info">
+	        <h2>Desarrolladores</h2>
+	        <p>Este proyecto fue desarrollado por Andrés Guaman.</p>
+	        <div class="social-links">
+	            <a href="https://www.linkedin.com/in/andrés-guamán-957320311" target="_blank">Linkedin</a>
+	            <a href="https://github.com/landr3s" target="_blank">GitHub</a>
+	        </div>
+	    </div>
+	</section>
+
+
 
         <section>
             <h2>Productos</h2>
@@ -119,11 +176,5 @@ header nav ul li a {
         </section>
     </main>
     <%@ include file="template/footer.jsp" %>
-
-    <!-- Sección de desarrollador -->
-    <section class="developer-section">
-        <p>Este proyecto fue desarrollado por <a href="https://github.com/landr3s">Andres Guaman</a>.</p>
-        <p>Encuéntrame en LinkedIn: <a href="https://www.linkedin.com/in/andrés-guamán-957320311">Andres Guaman</a>.</p>
-    </section>
 </body>
 </html>

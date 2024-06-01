@@ -2,12 +2,6 @@
 <section class="welcome-section">
     
     <div class="container">
-        <div class="image-gallery">
-            <img src="${pageContext.request.contextPath}/images/image1.jpg" alt="Imagen 1">
-            <img src="${pageContext.request.contextPath}/images/image2.jpg" alt="Imagen 2">
-            <img src="${pageContext.request.contextPath}/images/image3.jpg" alt="Imagen 3">
-            <img src="${pageContext.request.contextPath}/images/image4.jpg" alt="Imagen 4">
-        </div>
         <div class="welcome-content">
             <h1>Bienvenido a Gojos</h1>
             <p>En Gojos nos preocupamos por tu salud y bienestar. Ofrecemos una amplia variedad de productos y recursos para ayudarte a mantenerte saludable y activo.</p>
