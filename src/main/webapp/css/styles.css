@@ -1,13 +1,20 @@
 /* WebContent/css/styles.css */
+
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos para el header */
 header {
     background-color: #333;
-    color: #333;
-    padding: 10px 0;
-    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -22,10 +29,24 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
 }
 
+header nav ul li:first-child {
+    margin-right: auto;
+}
+
+header nav ul li:last-child {
+    margin-left: auto;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+/* Estilos para el main */
 main {
     padding: 20px;
     text-align: center;
@@ -36,6 +57,7 @@ main section {
     margin: auto;
 }
 
+/* Estilos para formularios */
 form {
     display: flex;
     flex-direction: column;
@@ -69,142 +91,13 @@ form button:hover {
     background-color: #555;
 }
 
+/* Estilos para el footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
     position: fixed;
-    width: 100%;
     bottom: 0;
-}
-
-/* Estilos para listas */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-ul li h3 {
-    margin: 0 0 10px;
-}
-
-ul li p {
-    margin: 5px 0;
-}
-
-ul li button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-ul li button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #f5f5f5;
-}
-
-table button {
-    padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-table button:hover {
-    background-color: #218838;
-}
-
-/* Estilos específicos para carrito */
-#cart {
-    margin-top: 20px;
-}
-
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-}
-
-#cart-items li {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-#cart-items li h3 {
-    margin: 0 0 10px;
-}
-
-#cart-items li p {
-    margin: 5px 0;
-}
-
-#cart-items li button {
-    padding: 10px 20px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#cart-items li button:hover {
-    background-color: #c82333;
-}
-
-#cart-total {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-#checkout, #clear-cart {
-    margin: 10px 5px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#checkout:hover, #clear-cart:hover {
-    background-color: #218838;
 }
